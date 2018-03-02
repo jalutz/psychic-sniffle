@@ -1,15 +1,21 @@
 pipeline {
-    agent { docker 'node:6.3' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'npm --version'
-                sh 'echo "Hello World"'
-                sh '''
+  agent {
+    docker 'node:6.3'
+  }
+  stages {
+    stage('build') {
+      steps {
+        sh 'npm --version'
+        sh 'echo "Hello World"'
+        sh '''
                     echo "Multiline shell steps work too"
                     ls -lah
                 '''
-            }
+        retry(count: 3) {
+          sh 'sh \'./flakey-deploy.sh\''
         }
+        
+      }
     }
+  }
 }
