@@ -11,10 +11,6 @@ pipeline {
                     echo "Multiline shell steps work too"
                     ls -lah
                 '''
-        retry(count: 3) {
-          sh 'sh \'./flakey-deploy.sh\''
-        }
-        
       }
     }
   }
