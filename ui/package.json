@@ -1,0 +1,34 @@
+{
+  "name": "psychic-sniffle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"!(node_modules)/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalutz/psychic-sniffle.git"
+  },
+  "author": "Jesse Lutz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jalutz/psychic-sniffle/issues"
+  },
+  "homepage": "https://github.com/jalutz/psychic-sniffle#readme",
+  "dependencies": {
+    "npm": "^5.7.1",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jsdom": "^11.6.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.0.4",
+    "sinon": "^4.4.2"
+  }
+}
