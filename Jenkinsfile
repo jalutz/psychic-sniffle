@@ -6,7 +6,8 @@ pipeline {
     stage('build') {
       steps {
         sh '''npm --version
-npm install'''
+'''
+        sh 'sudo npm install'
       }
     }
     stage('Npm test') {
