@@ -12,7 +12,8 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        sh 'mocha "!(node_modules)/**/*.spec.js"'
+        sh '''cd ui
+npm test'''
       }
     }
     stage('Push') {
