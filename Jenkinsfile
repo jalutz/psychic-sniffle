@@ -11,8 +11,9 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        sh '''cd ui && npm install mocha && npm test
-'''
+        sh 'cd ui'
+        sh 'npm install'
+        sh 'npm test'
       }
     }
     stage('Push') {
