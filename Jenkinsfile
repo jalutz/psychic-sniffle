@@ -11,9 +11,8 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        sh 'cd ui'
-        sh 'npm install'
-        sh 'npm test'
+        sh 'cd ui && npm install'
+        sh 'cd ui && npm test'
       }
     }
     stage('Push') {
