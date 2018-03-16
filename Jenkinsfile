@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        sh '''cd ui && node node_modules/.bin/mocha && npm test
+        sh '''cd ui && node node_modules/mocha && npm test
 '''
       }
     }
