@@ -10,8 +10,7 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        fileExists 'package.json'
-        sh 'npm test'
+        sh 'mocha \"!(node_modules)/**/*.spec.js\'
       }
     }
     stage('Push') {
