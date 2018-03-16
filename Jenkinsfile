@@ -7,12 +7,12 @@ pipeline {
       steps {
         sh '''npm --version
 '''
-        sh 'npm install'
       }
     }
     stage('Npm test') {
       steps {
         sh '''cd ui
+npm install
 npm test'''
       }
     }
