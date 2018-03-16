@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Npm test') {
       steps {
-        sh 'mocha \"!(node_modules)/**/*.spec.js\'"
+        sh 'mocha \"!(node_modules)/**/*.spec.js\"'
       }
     }
     stage('Push') {
